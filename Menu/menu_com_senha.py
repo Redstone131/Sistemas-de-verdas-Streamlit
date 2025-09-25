@@ -1,6 +1,6 @@
 import streamlit as st
-from Utilidade.banco import conect, tabelaRegistro, inserir_registro
-from . import principal_menu
+from Utilidade.banco import tabelaRegistro, inserir_registro
+from .principal_menu import showPrincipal
 
 def showSenha():
     st.title("Bem-vindo ao OrtêncIA")
@@ -34,6 +34,7 @@ def showSenha():
         if st.button("Registrar"):
             inserir_registro(new_email, new_senha)
             st.success("Usuário registrado com sucesso! Por favor, faça o login.")
+
 
 
 
