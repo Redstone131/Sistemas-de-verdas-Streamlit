@@ -5,7 +5,7 @@ from . import principal_menu
 def showSenha():
     st.title("Bem-vindo ao OrtêncIA")
     st.sidebar.title("Menu com senha.")
-    tabelaRegsitro()
+    tabelaRegistro()
 
     menu = st.sidebar.radio("Escolha:", ['Login', 'Registrar'])
 
@@ -34,6 +34,7 @@ def showSenha():
         if st.button("Registrar"):
             inserir_registro(new_email, new_senha)
             st.success("Usuário registrado com sucesso! Por favor, faça o login.")
+
 
 
 
