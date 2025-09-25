@@ -19,6 +19,20 @@ def tabela():
 
 tabela()
 
+def tabelaRegistro():
+    conn = conect()
+    c = conn.cursor()
+    c.execute('''CREATE TABLE IF NOT EXISTS registro(
+                  id INTEGER PRIMARY KEY AUTOINCREMENT,
+                  email TEXT NOT NULL,
+                  senha TEXT NOT NULL
+                )
+              ''')
+    conn.commit()
+    conn.close()
+
+tabelaRegistro()
+
 def atualizar_bd():
     conn = conect()
     c = conn.cursor()
@@ -62,19 +76,7 @@ def deletar_cliente(id):
     conn.commit()
     conn.close()
 
-def tabelaRegistro():
-    conn = conect()
-    c = conn.cursor()
-    c.execute('''CREATE TABLE IF NOT EXISTS registro(
-                  id INTEGER PRIMARY KEY AUTOINCREMENT,
-                  email TEXT NOT NULL,
-                  senha TEXT NOT NULL
-                )
-              ''')
-    conn.commit()
-    conn.close()
 
-tabelaRegistro()
 
 def inserir_registro(email, senha):
     conn = conect()
@@ -82,5 +84,6 @@ def inserir_registro(email, senha):
     c.execute("INSERT INTO registro (email, senha) VALUES (?, ?)", (email, senha))
     conn.commit()
     conn.close()
+
 
 
