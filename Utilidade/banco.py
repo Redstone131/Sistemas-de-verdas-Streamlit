@@ -62,7 +62,7 @@ def deletar_cliente(id):
     conn.commit()
     conn.close()
 
-def tabelaRegsitro():
+def tabelaRegistro():
     conn = conect()
     c = conn.cursor()
     c.execute('''CREATE TABLE IF NOT EXISTS registro(
@@ -82,4 +82,5 @@ def inserir_registro(email, senha):
     c.execute("INSERT INTO registro (email, senha) VALUES (?, ?)", (email, senha))
     conn.commit()
     conn.close()
+
 
