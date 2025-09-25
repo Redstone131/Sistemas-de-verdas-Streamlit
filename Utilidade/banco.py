@@ -74,9 +74,12 @@ def tabelaRegsitro():
     conn.commit()
     conn.close()
 
+tabelaRegistro()
+
 def inserir_registro(email, senha):
     conn = conect()
     c = conn.cursor()
     c.execute("INSERT INTO registro (email, senha) VALUES (?, ?)", (email, senha))
     conn.commit()
     conn.close()
+
