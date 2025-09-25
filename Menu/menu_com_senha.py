@@ -1,5 +1,5 @@
 import streamlit as st
-from Utilidade.banco import conect, tabelaRegsitro, inserir_registro
+from Utilidade.banco import conect, tabelaRegistro, inserir_registro
 from principal_menu import showPrincipal
 
 def showMenuComSenha():
@@ -34,3 +34,4 @@ def showMenuComSenha():
         if st.button("Registrar"):
             inserir_registro(new_email, new_senha)
             st.success("Usuário registrado com sucesso! Por favor, faça o login.")
+
