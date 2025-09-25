@@ -5,6 +5,7 @@ from Models import *
 from Menu import *
 from tests.testes import groqCloud
 
-menu_com_senha.showMenuComSenha()
+showMenuComSenha()
 
 # principal_menu.showPrincipal()
+
